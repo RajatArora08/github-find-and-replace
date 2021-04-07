@@ -1,0 +1,31 @@
+{
+  "repositories": [
+    "<org>/<repo-1>",
+    "<org>/<repo-2>"
+  ],
+  "find_and_replace_list": [
+    [
+      "<text-to-find-1>",
+      "<text-to-replace-1>"
+    ],
+    [
+      "<text-to-find-2>",
+      "<text-to-replace-2>"
+    ]
+  ],
+  "files": [
+    "<file-path-1>",
+    "<file-path-2>"
+  ],
+  "token": "<token>",
+  "ssh_key": "~/.ssh/id_ed25519",
+  "branch_name": "fancy-feature",
+  "host_name": "github.com",
+  "commit_message": "Added a fancy feature",
+  "pull_request_body": "Added a fancy feature in this pull request",
+  "base_branch": "main",
+  "remote_name": "origin",
+  "local_clone_path": "temp_repositories/",
+  "author_name": "John Doe",
+  "author_email": "john@example.com"
+}
