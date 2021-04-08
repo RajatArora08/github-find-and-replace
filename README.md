@@ -22,7 +22,7 @@ All configurations can be edited in [config.json](config.json).
 | local_clone_path | str | Local path where repositories can be cloned. Defaults to `temp_repositories/`. |
 | author_name | str | Author name for commit. |
 | author_email | str | Author email for commit. |
-| log_level | str | The levels, in increasing order of severity, are DEBUG, INFO, WARNING, ERROR, and CRITICAL. The default setting is INFO. |
+| log_level | str | The levels, in increasing order of severity, are DEBUG, INFO, WARNING, ERROR, and CRITICAL. Defaults to INFO. |
 
 ## How to run?
 
