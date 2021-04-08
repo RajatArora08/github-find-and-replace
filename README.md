@@ -46,4 +46,4 @@ Step 3: Run script using Python 3.x+
 python main.py
 ```
 
-All pull requests are logged to 
+NOTE: All pull requests are logged to `pull_requests.log` for ease of sharing.

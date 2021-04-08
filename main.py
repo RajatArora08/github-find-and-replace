@@ -20,6 +20,8 @@ def main(config):
     author = Author(name=config['author_name'], email=config['author_email'])
     g = util.get_github(hostname, config['token'])
 
+    log_file = open('pull_requests.log', 'a')
+
     for repository in config['repositories']:
         path_to_repository = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                           local_clone_path + repository)
@@ -64,9 +66,12 @@ def main(config):
         repo = g.get_repo(repository)
         pr = repo.create_pull(title=commit_message, body=pr_body, head=branch_name, base=base_branch)
         logging.info(f'Pull request created: {pr.html_url}')
+        log_file.write(f'{pr.html_url}\n')
 
     if os.path.exists(local_clone_path):
         shutil.rmtree(local_clone_path)
+
+    log_file.close()
 
 
 if __name__ == '__main__':
