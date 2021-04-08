@@ -62,5 +62,4 @@ def main(config):
 
 
 if __name__ == '__main__':
-    config = util.get_config('config.json')
-    main(config)
+    main(util.get_config('config.json'))
