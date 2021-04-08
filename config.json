@@ -27,5 +27,6 @@
   "remote_name": "origin",
   "local_clone_path": "temp_repositories/",
   "author_name": "John Doe",
-  "author_email": "john@example.com"
+  "author_email": "john@example.com",
+  "log_level": "DEBUG"
 }
