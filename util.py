@@ -16,6 +16,6 @@ def get_github(hostname, token):
         return Github(base_url=f'https://{hostname}/api/v3', login_or_token=token)
 
 
-def get_config():
-    with open('config-test.json') as config_file:
-        config = json.load(config_file)
+def get_config(file):
+    with open(file) as config_file:
+        return json.load(config_file)
