@@ -55,18 +55,18 @@ def main(config):
                     file.write(new_file_data)
                     file.close()
 
-                cloned_repository.index.add(path_to_repository_file)
-                logging.info(f'git add {path_to_repository_file}')
+        changed_files = [item.a_path for item in cloned_repository.index.diff(None)]
 
-        cloned_repository.index.commit(commit_message, author=author)
-        origin = cloned_repository.remote(name=remote)
-        origin.push(new_branch)
-        logging.info(f'git push {remote} {branch_name}')
+        if changed_files:
+            cloned_repository.index.commit(commit_message, author=author)
+            origin = cloned_repository.remote(name=remote)
+            origin.push(new_branch)
+            logging.info(f'git push {remote} {branch_name}')
 
-        repo = g.get_repo(repository)
-        pr = repo.create_pull(title=commit_message, body=pr_body, head=branch_name, base=base_branch)
-        logging.info(f'Pull request created: {pr.html_url}')
-        log_file.write(f'{pr.html_url}\n')
+            repo = g.get_repo(repository)
+            pr = repo.create_pull(title=commit_message, body=pr_body, head=branch_name, base=base_branch)
+            logging.info(f'Pull request created: {pr.html_url}')
+            log_file.write(f'{pr.html_url}\n')
 
     if os.path.exists(local_clone_path):
         shutil.rmtree(local_clone_path)
