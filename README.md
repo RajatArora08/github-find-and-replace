@@ -1,4 +1,6 @@
 # github-find-and-replace
+[![Build](https://github.com/RajatArora08/github-find-and-replace/actions/workflows/main.yml/badge.svg)](https://github.com/RajatArora08/github-find-and-replace/actions/workflows/main.yml)
+[![Docker](https://img.shields.io/docker/pulls/rajatar08/github-find-and-replace.svg)](https://hub.docker.com/r/rajatar08/github-find-and-replace)
 
 This code allows you to find and replace text across repositories and create pull requests.
 
