@@ -27,30 +27,17 @@ All configurations can be edited in [config.json](config.json).
 ## How to run?
 
 
-
 ### Using docker (Recommended)
 
-Step 1: git clone
+Step 1: Edit configurations in [config.json](config.json)
+
+Step 2: Run docker container
 
 ```bash
-git clone git@github.com:RajatArora08/github-find-and-replace.git
+docker run -it -v $(pwd)/config.json:/app/config.json -v ~/.ssh/id_ed25519:/root/.ssh/id_ed25519 rajatar08/github-find-and-replace:latest
 ```
 
-Step 2: Edit configurations in [config.json](config.json)
-
-Step 3: Build docker
-
-```bash
-docker build -t github-find-and-replace:latest .
-```
-
-Step 4: Run docker container
-
-```bash
-docker run -it -v $(pwd)/config.json:/app/config.json -v ~/.ssh/id_ed25519:/root/.ssh/id_ed25519 github-find-and-replace:latest
-```
-
-### Run on local python or IDE
+### Run on local
 
 Step 1: git clone
 
