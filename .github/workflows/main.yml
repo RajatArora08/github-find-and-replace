@@ -50,4 +50,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: latest
+          tags: rarora2/github-find-and-replace:latest
+          
