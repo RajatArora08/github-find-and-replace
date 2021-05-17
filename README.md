@@ -29,7 +29,7 @@ All configurations can be edited in [config.json](config.json).
 ## How to run?
 
 
-### Using docker (Recommended)
+### Option 1: Using docker (Recommended)
 
 Step 1: Edit configurations in [config.json](config.json)
 
@@ -39,7 +39,7 @@ Step 2: Run docker container
 docker run -it -v $(pwd)/config.json:/app/config.json -v ~/.ssh/id_ed25519:/root/.ssh/id_ed25519 rajatar08/github-find-and-replace:latest
 ```
 
-### Run on local
+### Option 2: Build and run on local
 
 Step 1: git clone
 
